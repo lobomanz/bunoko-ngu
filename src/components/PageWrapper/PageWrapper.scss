@@ -1,7 +1,8 @@
 /* PageWrapper.css */
 .page {
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  transition-delay: 0.2s; /* optional slight delay */
 }
 
 .page.active {
