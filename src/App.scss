@@ -1,0 +1,18 @@
+/* Full-screen navy background */
+.app-wrapper {
+  background-color: #001f3f; /* Navy blue */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Center content and constrain max width */
+.app-content {
+  background-color: #fff; /* Content background */
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
