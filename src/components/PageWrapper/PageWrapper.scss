@@ -1,0 +1,9 @@
+/* PageWrapper.css */
+.page {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.page.active {
+  opacity: 1;
+}

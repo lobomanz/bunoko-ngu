@@ -7,7 +7,8 @@ import Careers from './components/Careers/Careers.js';
 import Services from './components/Services/Services.js';
 import AboutUs from './components/AboutUs/AboutUs';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.scss'; // Make sure to create this file
+import './App.scss';
+import PageWrapper from './components/PageWrapper/PageWrapper'; // Import PageWrapper
 
 function App() {
   return (
@@ -17,11 +18,11 @@ function App() {
           <Header />
           <main>
             <Routes>
-              <Route path='/' element={<HomePage />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/about' element={<AboutUs />} />
-              <Route path='/careers' element={<Careers />} />
-              <Route path='/services' element={<Services />} />
+              <Route path='/' element={<PageWrapper><HomePage /></PageWrapper>} />
+              <Route path='/contact' element={<PageWrapper><Contact /></PageWrapper>} />
+              <Route path='/about' element={<PageWrapper><AboutUs /></PageWrapper>} />
+              <Route path='/careers' element={<PageWrapper><Careers /></PageWrapper>} />
+              <Route path='/services' element={<PageWrapper><Services /></PageWrapper>} />
             </Routes>
           </main>
         </Router>
