@@ -1,15 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import './HomePage.scss';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 
 function HomePage() {
-  const [wantedService, setWantedService] = useState("");
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   const navigateServices = (service) => {
-    setWantedService(service);
     navigate('/services', { state: { wantedService: service } });
   };
 
@@ -33,19 +30,31 @@ function HomePage() {
       <section className="home__services">
         <div className="card-grid">
           <button className="card" onClick={() => navigateServices('AC')}>
-            <img src="http://bunoko-ngu.hr/wp-content/uploads/2015/04/home_factory_icon_1.png" alt="AC" />
+            <img
+              src="http://bunoko-ngu.hr/wp-content/uploads/2015/04/home_factory_icon_1.png"
+              alt="AC"
+            />
             <h3>{t('airCondition')}</h3>
           </button>
           <button className="card" onClick={() => navigateServices('WINDING')}>
-            <img src="http://bunoko-ngu.hr/wp-content/uploads/2015/04/home_factory_icon_2.png" alt="Winding" />
+            <img
+              src="http://bunoko-ngu.hr/wp-content/uploads/2015/04/home_factory_icon_2.png"
+              alt="Winding"
+            />
             <h3>{t('winding')}</h3>
           </button>
           <button className="card" onClick={() => navigateServices('TOOLS')}>
-            <img src="http://bunoko-ngu.hr/wp-content/uploads/2015/04/home_factory_icon_5.png" alt="Tools" />
+            <img
+              src="http://bunoko-ngu.hr/wp-content/uploads/2015/04/home_factory_icon_5.png"
+              alt="Tools"
+            />
             <h3>{t('tools')}</h3>
           </button>
           <button className="card" onClick={() => navigateServices('TOOLSALE')}>
-            <img src="http://bunoko-ngu.hr/wp-content/uploads/2015/04/home_factory_icon_3.png" alt="Tool Sale" />
+            <img
+              src="http://bunoko-ngu.hr/wp-content/uploads/2015/04/home_factory_icon_3.png"
+              alt="Tool Sale"
+            />
             <h3>{t('toolsSale')}</h3>
           </button>
         </div>
